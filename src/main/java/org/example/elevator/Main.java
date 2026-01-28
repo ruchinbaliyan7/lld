@@ -27,7 +27,6 @@ public class Main {
         ScheduledExecutorService scheduler =
                 Executors.newScheduledThreadPool(3);
 
-        // 🔥 Schedule EACH elevator independently
         for (Elevator elevator : controller.elevatorList) {
             scheduler.scheduleAtFixedRate(
                     elevator::step,
